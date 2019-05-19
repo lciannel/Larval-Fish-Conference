@@ -8,7 +8,7 @@ library(date)
 library(itsadug) 
 
 setwd('/Users/lciannel/Documents/MyDocuments/...') #Change this as appropirate
-bathy.dat<-read.table('/Users/lciannel/Documents/MyDocuments/Funding/NSF/Geoscience/data/BeringDepth.txt',sep='')#Depth dara are from NOAA repositories (1 min resolution)
+bathy.dat<-read.table('BeringDepth.txt',sep='')#Depth dara are from NOAA repositories (1 min resolution)
 names(bathy.dat)<-c('lon','lat','depth')
 bathy.dat$depth[bathy.dat$depth>0]<-NA#Avoid points above water
 head(bathy.dat)
